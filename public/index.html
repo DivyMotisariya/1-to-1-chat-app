@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Socket.io Simple Chat App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="/style.css" /> -->
+  <script>
+    let name;
+    while (!(name = prompt("Enter your name")));
+  </script>
+</head>
+
+<body style="margin-top: 25px">
+  <div class="container">
+    <div class="row" style="height: 550px; border: 1px solid black; border-radius: 5px">
+      <div class="col-4" style="border-right: 1px solid black; border-radius: 5px">
+        <h5 id="username" style="text-align: center"></h5>
+        <ul id="users" class="list-group list-group-flush" role="tablist"></ul>
+      </div>
+
+      <div class="col-8">
+        <h5 id="selected"></h5>
+        <div id="rightMenu" style="visibility: hidden;">
+          <form id="inputform" class="form-input">
+            <div class="row" style="margin: 0">
+              <input autofocus autocomplete="off" class="col-10" type="text" name="message" id="message" placeholder="Enter message . . ." />
+              <input class="col-2 btn btn-success" type="submit" id="send" value="Send" />
+            </div>
+          </form>
+          <div id="chatbox" style="
+                height: 450px;
+                padding: 5px;
+                overflow-y: scroll;
+                overflow-wrap: break-word;
+              "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script>
+  <script src="/main.js"></script>
+  <script type="text/javascript"></script>
+</body>
+
+</html>
