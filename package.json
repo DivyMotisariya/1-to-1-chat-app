@@ -1,13 +1,13 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple 1-to-1 realtime chat app using Socket.io with Node.js.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["node.js", "express", "socket.io"],
+  "author": "Divy Motisariya <motisariyadivy2@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
